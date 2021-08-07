@@ -1,2 +1,0 @@
-:root{--liftWidth:0%;--floorHeight:0%}#mainContainer{height:100vh}#LiftContainer{height:90%;width:70%}#innerLiftContainer{height:95%;width:95%}#floor{height:0%;height:var(--floorHeight);width:100%}#floorBox{width:85%;padding:3% 3% 3% 5%}#floorTitle{width:15%}#innerFloorBox{height:85%;padding:2% 0}#baseLine{height:3px;background-color:#000}#buttonBox{margin-left:-2%}
-/*# sourceMappingURL=main.3032a875.chunk.css.map */
