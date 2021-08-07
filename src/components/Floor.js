@@ -5,12 +5,20 @@ function Floor(props){
         <div className="d-flex flex-row" id="floor">
             <div className="d-flex flex-column-reverse" id="floorBox">
                 <div className="container" id="baseLine"></div>
-                <div className="d-flex flex-column" id="innerFloorBox">
-                    {}
+                <div className="d-flex flex-row justify-content-between" id="innerFloorBox">
+                    <div id="buttonBox" className="d-flex flex-column-reverse">
+                        {props.first === false && <button className="rounded" id="downButton">Down</button>}
+                        {props.last === false && <button className="rounded" id="upButton">Up</button>}
+                    </div>
+                    {
+                        props.first && <div id="lifts" className="d-flex flex-row">
+                            
+                        </div>
+                    }
                 </div>
             </div>
             <div className="d-flex flex-column-reverse" id="floorTitle">
-                <p>Floor {props.floorNo}</p>
+                <p id="title">Floor {props.floorNo}</p>
             </div>
         </div>
     );

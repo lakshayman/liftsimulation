@@ -9,17 +9,14 @@
 #LiftContainer{
     height: 90%;
     width: 70%;
-    background-color: aqua;
 }
 #innerLiftContainer{
     height: 95%;
     width: 95%;
-    background-color: blue;
 }
 #floor{
     height: var(--floorHeight);
     width: 100%;
-    background-color: yellow;
 }
 #floorBox{
     width: 85%;
@@ -28,12 +25,34 @@
 }
 #floorTitle{
     width: 15%;
+    font-weight: bold;
 }
 #innerFloorBox{
     height: 85%;
+    padding-bottom: 2%;
 }
 #baseLine{
     height: 3px;
     background-color: black;
-    
+}
+#buttonBox{
+    margin-left: -2%;
+    width: 8%;
+}
+#upButton{
+    margin-bottom: 10%;
+    border: none;
+    background-color: yellowgreen;
+    width: 100%;
+}
+#downButton{
+    border: none;
+    background-color: yellow;
+    width: 100%;
+}
+#title{
+    margin-bottom: 15%;
+}
+#lifts{
+    width: 90%;
 }
