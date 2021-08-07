@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/liftsimulation/static/css/main.b97fbc0f.chunk.css",
-    "main.js": "/liftsimulation/static/js/main.42744d38.chunk.js",
-    "main.js.map": "/liftsimulation/static/js/main.42744d38.chunk.js.map",
+    "main.css": "/liftsimulation/static/css/main.7376ea62.chunk.css",
+    "main.js": "/liftsimulation/static/js/main.dc376269.chunk.js",
+    "main.js.map": "/liftsimulation/static/js/main.dc376269.chunk.js.map",
     "runtime-main.js": "/liftsimulation/static/js/runtime-main.282fd92b.js",
     "runtime-main.js.map": "/liftsimulation/static/js/runtime-main.282fd92b.js.map",
     "static/js/2.cfc00f35.chunk.js": "/liftsimulation/static/js/2.cfc00f35.chunk.js",
     "static/js/2.cfc00f35.chunk.js.map": "/liftsimulation/static/js/2.cfc00f35.chunk.js.map",
     "index.html": "/liftsimulation/index.html",
-    "static/css/main.b97fbc0f.chunk.css.map": "/liftsimulation/static/css/main.b97fbc0f.chunk.css.map",
+    "static/css/main.7376ea62.chunk.css.map": "/liftsimulation/static/css/main.7376ea62.chunk.css.map",
     "static/js/2.cfc00f35.chunk.js.LICENSE.txt": "/liftsimulation/static/js/2.cfc00f35.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.282fd92b.js",
     "static/js/2.cfc00f35.chunk.js",
-    "static/css/main.b97fbc0f.chunk.css",
-    "static/js/main.42744d38.chunk.js"
+    "static/css/main.7376ea62.chunk.css",
+    "static/js/main.dc376269.chunk.js"
   ]
 }
