@@ -56,3 +56,9 @@
 #lifts{
     width: 90%;
 }
+#lift{
+    width: 10%;
+    height: 150%;
+    margin-top: -3%;
+    background-color: blue;
+}

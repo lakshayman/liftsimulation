@@ -1,4 +1,8 @@
 function Floor(props){
+    let lifts = []
+    for(let i = 1;i<=props.noOfLifts;i++){
+        lifts.push(<div id="lift" key={i}></div>);
+    }
     let root = document.documentElement;
     root.style.setProperty('--floorHeight', `${100/props.noOfFloors}%`);
     return (
@@ -11,8 +15,8 @@ function Floor(props){
                         {props.last === false && <button className="rounded" id="upButton">Up</button>}
                     </div>
                     {
-                        props.first && <div id="lifts" className="d-flex flex-row">
-                            
+                        props.first && <div id="lifts" className="d-flex flex-row justify-content-around">
+                            {lifts}
                         </div>
                     }
                 </div>
