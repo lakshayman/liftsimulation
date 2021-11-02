@@ -1,63 +1,67 @@
 :root{
     --liftWidth: 0%;
     --floorHeight: 0%;
+    --transitionTime: 0s;
 }
-#mainContainer{
+.mainContainer{
     height: 100vh;
 }
 
-#LiftContainer{
+.LiftContainer{
     height: 90%;
     width: 70%;
 }
-#innerLiftContainer{
+.innerLiftContainer{
     height: 95%;
     width: 95%;
 }
-#floor{
+.floor{
     height: var(--floorHeight);
     width: 100%;
 }
-#floorBox{
+.floorBox{
     width: 85%;
     padding: 3%;
     padding-left: 5%;
 }
-#floorTitle{
+.floorTitle{
     width: 15%;
     font-weight: bold;
 }
-#innerFloorBox{
+.innerFloorBox{
     height: 85%;
     padding-bottom: 2%;
 }
-#baseLine{
+.baseLine{
     height: 3px;
     background-color: black;
 }
-#buttonBox{
+.buttonBox{
     margin-left: -2%;
     width: 8%;
 }
-#upButton{
+.upButton{
     margin-bottom: 10%;
     border: none;
     background-color: yellowgreen;
     width: 100%;
 }
-#downButton{
+.downButton{
     border: none;
     background-color: yellow;
     width: 100%;
 }
-#title{
+.title{
     margin-bottom: 15%;
 }
-#lifts{
+.lifts{
     width: 90%;
 }
-#lift{
+.lift{
     width: 10%;
     margin-top: -3%;
     background-color: blue;
+    position: relative;
+    top: 0px;
+    transition: top ease var(--transitionTime);
 }
