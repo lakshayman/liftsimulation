@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Floor from './Floor';
 function LiftContainer(){
-    var noOfFloors = 4;
-    var noOfLifts = 2;
+    var noOfFloors = 20;
+    var noOfLifts = 5;
     var floors = [];
 
     var liftRecord = [];
@@ -17,17 +17,30 @@ function LiftContainer(){
 
     });
 
+    function closestVal(arr, K){
+        let res = arr[0];
+        let m = 0;
+        for(let i = 1; i < arr.length; i++){
+            if (Math.abs(K - res) > Math.abs(K - arr[i])){
+                res = arr[i];
+                m = i;
+            }
+        }
+        return m;
+    }
+
     const downClicked = (floorNo) => {
-        if(liftRecord[0] !== floorNo){
+        const liftid = closestVal(liftRecord, floorNo);
+        if(liftRecord[liftid] !== floorNo){
             document.getElementById(`downButton${floorNo}`).disabled = true;
-            if(liftMoving[0] === true) {
+            if(liftMoving[liftid] === true) {
                 setTimeout(() => downClicked(floorNo), 100);
             } else {
-                liftMoving[0] = true;
-                let floorDiff = Math.abs(floorNo - liftRecord[0]);
+                liftMoving[liftid] = true;
+                let floorDiff = Math.abs(floorNo - liftRecord[liftid]);
                 let root = document.documentElement;
                 root.style.setProperty('--transitionTime', `${floorDiff*2}s`);
-                const lift = document.getElementById(`lift1`);
+                const lift = document.getElementById(`lift${liftid + 1}`);
                 const buttonBox = document.getElementById(`buttonBox${floorNo}`);
                 let Diff = (buttonBox.offsetTop + buttonBox.offsetHeight) - (lift.offsetTop + lift.offsetHeight);
                 let currentTop = 0
@@ -40,8 +53,8 @@ function LiftContainer(){
                     lift.style.top = `${currentTop + Diff}px`
                 }
                 setTimeout(() => {
-                    liftMoving[0]=false;
-                    liftRecord[0] = floorNo;
+                    liftMoving[liftid]=false;
+                    liftRecord[liftid] = floorNo;
                     if(floorNo !== noOfFloors) document.getElementById(`upButton${floorNo}`).disabled = false;
                     if(floorNo !== 1) document.getElementById(`downButton${floorNo}`).disabled = false;
                 }, floorDiff*2000);   
@@ -50,16 +63,17 @@ function LiftContainer(){
     };
 
     const upClicked = (floorNo) => {
-        if(liftRecord[0] !== floorNo){
+        const liftid = closestVal(liftRecord, floorNo);
+        if(liftRecord[liftid] !== floorNo){
             document.getElementById(`upButton${floorNo}`).disabled = true;
-            if(liftMoving[0] === true) {
+            if(liftMoving[liftid] === true) {
                 setTimeout(() => upClicked(floorNo), 100);
             } else {
-                liftMoving[0] = true;
-                let floorDiff = Math.abs(floorNo - liftRecord[0]);
+                liftMoving[liftid] = true;
+                let floorDiff = Math.abs(floorNo - liftRecord[liftid]);
                 let root = document.documentElement;
                 root.style.setProperty('--transitionTime', `${floorDiff*2}s`);
-                const lift = document.getElementById(`lift1`);
+                const lift = document.getElementById(`lift${liftid + 1}`);
                 const buttonBox = document.getElementById(`buttonBox${floorNo}`);
                 let Diff = (buttonBox.offsetTop + buttonBox.offsetHeight) - (lift.offsetTop + lift.offsetHeight);
                 let currentTop = 0
@@ -72,8 +86,8 @@ function LiftContainer(){
                     lift.style.top = `${currentTop + Diff}px`
                 }
                 setTimeout(() => {
-                    liftMoving[0]=false;
-                    liftRecord[0] = floorNo;
+                    liftMoving[liftid]=false;
+                    liftRecord[liftid] = floorNo;
                     if(floorNo !== noOfFloors) document.getElementById(`upButton${floorNo}`).disabled = false;
                     if(floorNo !== 1) document.getElementById(`downButton${floorNo}`).disabled = false;
                 }, floorDiff*2000);   
