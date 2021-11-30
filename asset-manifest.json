@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/liftsimulation/static/css/main.5df077ac.chunk.css",
-    "main.js": "/liftsimulation/static/js/main.eee440e6.chunk.js",
-    "main.js.map": "/liftsimulation/static/js/main.eee440e6.chunk.js.map",
+    "main.js": "/liftsimulation/static/js/main.fd843b1d.chunk.js",
+    "main.js.map": "/liftsimulation/static/js/main.fd843b1d.chunk.js.map",
     "runtime-main.js": "/liftsimulation/static/js/runtime-main.282fd92b.js",
     "runtime-main.js.map": "/liftsimulation/static/js/runtime-main.282fd92b.js.map",
     "static/js/2.cfc00f35.chunk.js": "/liftsimulation/static/js/2.cfc00f35.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.282fd92b.js",
     "static/js/2.cfc00f35.chunk.js",
     "static/css/main.5df077ac.chunk.css",
-    "static/js/main.eee440e6.chunk.js"
+    "static/js/main.fd843b1d.chunk.js"
   ]
 }
